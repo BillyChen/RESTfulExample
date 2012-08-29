@@ -3,9 +3,12 @@ package com.billy.rest;
 import java.util.List;
 
 import javax.ws.rs.DefaultValue;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.HeaderParam;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
@@ -97,6 +100,28 @@ public class UserRestService {
 		   .status(200)
 		   .entity("getUsers is called, from : " + from + ", to : " + to
 			+ ", orderBy" + orderBy.toString()).build();
+ 
+	}
+	
+	@POST
+	@Path("/add")
+	public Response addUser(
+		@FormParam("name") String name,
+		@FormParam("age") int age) {
+ 
+		return Response.status(200)
+			.entity("addUser is called, name : " + name + ", age : " + age)
+			.build();
+ 
+	}
+	
+	@GET
+	@Path("/get")
+	public Response addUser(@HeaderParam("user-agent") String userAgent) {
+ 
+		return Response.status(200)
+			.entity("addUser is called, userAgent : " + userAgent)
+			.build();
  
 	}
 

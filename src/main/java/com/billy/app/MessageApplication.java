@@ -5,6 +5,7 @@ import java.util.Set;
 import javax.ws.rs.core.Application;
 
 import com.billy.rest.BookRestService;
+import com.billy.rest.FileService;
 import com.billy.rest.MessageRestService;
 import com.billy.rest.UserRestService;
 
@@ -15,6 +16,7 @@ public class MessageApplication extends Application {
 		singletons.add(new MessageRestService());
 		singletons.add(new UserRestService());
 		singletons.add(new BookRestService());
+		singletons.add(new FileService());
 	}
 	
 	@Override
