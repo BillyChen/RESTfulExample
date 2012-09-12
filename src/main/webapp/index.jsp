@@ -24,5 +24,23 @@
 	<h3 style="font-family: verdana">Download Text File From JAX-RS</h3>
 	<a href=http://localhost:8080/RESTfulExample/rest/file/get>Saying
 		Goodbye to Cambridge Again</a>
+	<h3 style="font-family: verdana">File upload example in RESTEasy</h3>
+	<a href=FileUpload.jsp>File upload example in RESTEasy</a>
+
+	<h3 style="font-family: verdana">JSON Example With RESTEasy + Jackson</h3>
+	<a href=http://localhost:8080/RESTfulExample/rest/json/product/get>JSON Product Get</a>
+	
+	<!-- script type="text/javascript">
+		var jsonObj;
+		function postBtnClick(){
+			jsonObj = {"name":"iPhone 5","amount":99};
+			document.postForm.submit();
+		}
+	</script>
+	<br/>
+	
+	<form name="postForm" action="rest/json/product/post" method="post" enctype="application/json">
+		<input type="button" value="Post Product" onclick="postBtnClick()"/>
+	</form-->
 </body>
 </html>
